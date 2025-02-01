@@ -6,6 +6,14 @@ body{
     height: 100vh;
     background-color: #f4f4f4;
 }
+.register-container {
+    background-color: white;
+    padding: 20px;
+    width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 0 q0px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
 .login-container {
     background-color: white;
     padding: 20px;
