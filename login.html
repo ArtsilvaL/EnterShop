@@ -25,7 +25,7 @@
         <p id="error-message" class="error-message"></p>
     </div>
     <script>
-      document.getElementById('loginForm').addEventListener('submit', async function(event) {
+ document.getElementById('loginForm').addEventListener('submit', async function(event) {
     event.preventDefault();
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
@@ -45,13 +45,16 @@
             return;
         }
 
+        // Salva os dados do usuário no LocalStorage
+        localStorage.setItem("usuario", JSON.stringify(data.usuario));
+
         alert(data.message);
-        window.location.href = "index.html"; // Redireciona após login
+        window.location.href = "index.html"; // Redireciona para a página principal
     } catch (error) {
         console.error("Erro ao fazer login:", error);
     }
 });
- 
+
     </script>
 </body>
 

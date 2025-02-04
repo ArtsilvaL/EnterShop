@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuário</title>
+    <style>
+        /* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Fundo da página com gradiente */
+body {
+    background: linear-gradient(to right, #0d6efd, #0b5ed7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Cartão de perfil */
+.perfil-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+    position: relative;
+}
+
+/* Ícone de usuário */
+.perfil-icon {
+    background: #0d6efd;
+    color: white;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    margin: 0 auto 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Nome do usuário */
+h1 {
+    color: #0d6efd;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+/* Informações do usuário */
+.perfil-info p {
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0;
+}
+
+/* Linha separadora */
+.perfil-info hr {
+    border: none;
+    height: 1px;
+    background: #ddd;
+    margin: 15px 0;
+}
+
+/* Botão de Logout */
+button {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #e63939;
+    transform: scale(1.05);
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="perfil-container">
+        <div class="perfil-icon">👤</div>
+        <h1 id="perfil-nome">Nome do Usuário</h1>
+        <div class="perfil-info">
+            <p><strong>Email:</strong> <span id="perfil-email">email@example.com</span></p>
+            <hr>
+            <button id="logout">Sair</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const usuario = JSON.parse(localStorage.getItem("usuario"));
+
+            if (!usuario) {
+                alert("Você precisa estar logado para acessar esta página!");
+                window.location.href = "login.html";
+                return;
+            }
+
+            document.getElementById("perfil-nome").textContent = usuario.nome;
+            document.getElementById("perfil-email").textContent = usuario.email;
+
+            document.getElementById("logout").addEventListener("click", function () {
+                localStorage.removeItem("usuario");
+                window.location.href = "index.html";
+            });
+        });
+    </script>
+
+</body>
+</html>

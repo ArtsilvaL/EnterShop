@@ -14,6 +14,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 80px;
     padding: 30px 20px;
     background-color: #0d6efd;
     color: white;
