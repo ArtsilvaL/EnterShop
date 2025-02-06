@@ -87,17 +87,37 @@ button:hover {
     background: #e63939;
     transform: scale(1.05);
 }
+/* Botão de Voltar */
+#voltar {
+    background: #0d6efd;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin-bottom: 10px;
+}
+
+#voltar:hover {
+    background: #0b5ed7;
+    transform: scale(1.05);
+}
+
 
     </style>
 </head>
 <body>
 
     <div class="perfil-container">
-        <div class="perfil-icon">👤</div>
+        <div class="perfil-icon">🐒</div>
         <h1 id="perfil-nome">Nome do Usuário</h1>
         <div class="perfil-info">
             <p><strong>Email:</strong> <span id="perfil-email">email@example.com</span></p>
             <hr>
+            <button id="voltar">Voltar para Página Principal</button>
             <button id="logout">Sair</button>
         </div>
     </div>
@@ -115,8 +135,14 @@ button:hover {
             document.getElementById("perfil-nome").textContent = usuario.nome;
             document.getElementById("perfil-email").textContent = usuario.email;
 
+            // Botão de Logout
             document.getElementById("logout").addEventListener("click", function () {
                 localStorage.removeItem("usuario");
+                window.location.href = "index.html";
+            });
+
+            // Botão de Voltar para a Página Principal
+            document.getElementById("voltar").addEventListener("click", function () {
                 window.location.href = "index.html";
             });
         });

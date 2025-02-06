@@ -3,7 +3,7 @@
 <!--Nossa ideia é criar uma página de vendas simples e funcional para agregar ao nosso currículo-->
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,37 +27,31 @@
 <nav class="navbar"> 
 <ul>
     <li><a href="carrinho.html"><img class="carrinho" src="Imagens/carrinho-de-compras.png" alt="carrinho"></a></li>
-    <li><a href="login.html">Entrar</a></li>
+    <li><a href="login.html" id="login-menu">Entrar</a></li>
     <li id="user-menu" style="display: none;">
-        <a href="perfil.html" > <span id="user-name"><img class="login_icon" src="Imagens/Person icon.png" alt="Icone Login"></span></a>
+        <a href="perfil.html" > <span id="user-menu"><img class="login_icon" src="Imagens/Person icon.png" alt="Icone Login"></span></a>
            </li>
 </ul>
 </nav>
     </header>
-<h1> CHAMA NA GRANDE</h1>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-    const userMenu = document.getElementById("user-menu");
-    const loginMenu = document.getElementById("login-menu");
-    const userName = document.getElementById("user-name");
-    const logoutButton = document.getElementById("logout");
+    <div class="banner-container">
+        <div class="banner-slide fade">
+            <img src="Imagens/banner1.jpg" alt="Promoção Especial">
+        </div>
+        <div class="banner-slide fade">
+            <img src="imag/banner2.jpg" alt="Novidades Chegando">
+        </div>
+        <div class="banner-slide fade">
+            <img src="img/banner3.jpg" alt="Ofertas Imperdíveis">
+        </div>
+    
+        <!-- Botões de navegação -->
+        <a class="prev" onclick="mudarSlide(-1)">&#10094;</a>
+        <a class="next" onclick="mudarSlide(1)">&#10095;</a>
+    </div>
+    
+    
 
-    // Verifica se o usuário está logado
-    const usuario = JSON.parse(localStorage.getItem("usuario"));
-
-    if (usuario) {
-        userMenu.style.display = "block"; // Mostra a aba do usuário
-        loginMenu.style.display = "none"; // Esconde o botão de login
-        userName.textContent = usuario.nome;
-    }
-
-    // Logout do usuário
-    logoutButton.addEventListener("click", function () {
-        localStorage.removeItem("usuario"); // Remove o usuário do LocalStorage
-        window.location.href = "index.html"; // Redireciona para a página principal
-    });
-});
-
-</script>
+<script src="script.js"></script>
 </body>
 </html>
