@@ -33,7 +33,7 @@ function mostrarSlides() {
     if (slideIndex > slides.length) { slideIndex = 1; }
 
     slides[slideIndex - 1].style.display = "block";
-    setTimeout(mostrarSlides, 5000); // Troca a cada 5 segundos
+    setTimeout(mostrarSlides, 10000); // Troca a cada 5 segundos
 }
 
 // Função para mudar os slides manualmente

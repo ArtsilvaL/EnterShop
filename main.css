@@ -103,15 +103,15 @@ body {
 
 /*Banner*/
 .banner-container{
-    align-items: center;
+    position: relative;
     max-width: 800px;
-    margin: auto;
+    margin: 40px auto;
     overflow: hidden;
+    border-radius: 10px;
 }
 .banner-slide img{
-    width: 500px;
-    left: 40px;
-    align-items: center;
+    width: 100%;
+   display: block;
     border-radius: 10px;
 }
 .prev, .next{
