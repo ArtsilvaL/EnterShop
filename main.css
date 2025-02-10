@@ -138,3 +138,52 @@ body {
     from{opacity: 0.4;}
     to{opacity: 1;}
 }
+/*Produtos*/
+/* Seção de produtos */
+.produtos {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.produtos h2 {
+    font-size: 28px;
+    color: #0d6efd;
+    margin-bottom: 20px;
+}
+
+/* Grid de produtos */
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Estilização dos produtos */
+.produto {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    text-align: center;
+}
+
+.produto i {
+    font-size: 40px;
+    color: #0d6efd;
+    margin-bottom: 10px;
+}
+
+.produto p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Efeito ao passar o mouse */
+.produto:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
