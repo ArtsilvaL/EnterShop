@@ -139,6 +139,77 @@ body {
     to{opacity: 1;}
 }
 /*Produtos*/
+
+/*Produtos em destaque*/
+.produtos-destaque{
+    text-align: center;
+    padding: 40px 20px;
+}
+.produtos-destaque h2{
+    font-size: 28px;
+    color: #0d6efd;
+    margin-bottom: 20px;
+}
+/*Grid de produtos*/
+.grid-produtosd{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+/*Cartão de produto*/
+.produto-card{
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    text-align: center;
+}
+.produto-card img{
+    width: 100px;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+}
+.produto-card h3{
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+.preco{
+    font-size: 16px;
+    font-weight: bold;
+    color: #0d6efd;
+    margin-bottom: 10px;
+}
+/*Botão comprar*/
+.btn-comprar{
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-comprar:hover{
+    background: #0b5ed7;
+    transform: scale(1.05);
+}
+/*Responsividade*/
+@media (max-width: 900px){
+    .grid-produtosd{
+        grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+    }
+}
+
 /* Seção de produtos */
 .produtos {
     text-align: center;
